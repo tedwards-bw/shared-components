@@ -49,6 +49,25 @@ To develop locally, run `npm run styleguide`. The docs should then be available 
 
 Please refer to the [contributing guide](https://github.com/Bandwidth/shared-components/blob/master/.github/CONTRIBUTING.md) and read through the pull request template before submitting a PR!
 
+
+## Linking shared components library
+
+Viewing shared components library changes inside another project requires an additional linking step. You must link react from the project in development to shared components. This is due to the way React is loaded. 
+
+**Shared Components Library**
+```
+npm link 
+npm link <<your_project_root_directory>>/node_modules/react/
+```
+
+**Project in development**
+```
+npm link @bandwidth/shared-components
+```
+
+Once the links have been established you can follow the steps in the [Developing](#developing) section like normal. Changes will automatically be reflected in your development project.
+
+
 # License
 
 The source of this library is licensed under the MIT license (see [LICENSE](./LICENSE))
