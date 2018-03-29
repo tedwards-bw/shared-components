@@ -2,11 +2,12 @@ import styled from 'styled-components';
 import get from 'extensions/themeGet';
 
 export default styled.div`
-  border-top: ${get('thicknesses.normal')} ${get('colors.gray.border')} solid;
+  border-width: ${get('thicknesses.normal')};
+  border-color: ${get('colors.gray.border')};
+  border-style: solid;
 
-  &:last-child {
-    border-bottom: ${get('thicknesses.normal')} ${get('colors.gray.border')}
-      solid;
+  &:not(:first-child) {
+    margin-top: -${get('thicknesses.normal')};
   }
 
   background: ${props =>
