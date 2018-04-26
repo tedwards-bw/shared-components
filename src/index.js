@@ -188,6 +188,15 @@ export {
 } from './components/Input/styles/InputRevealPasswordWrapper';
 export { default as InputStyles } from './components/Input/styles/InputStyles';
 export { default as Label } from './components/Label';
+export { default as Link } from './components/Link';
+export { default as IconLink } from './components/Link/styles/IconLink';
+export {
+  default as PropBlacklistLink,
+} from './components/Link/styles/PropBlacklistLink';
+export { default as TextLink } from './components/Link/styles/TextLink';
+export {
+  default as TransparentLink,
+} from './components/Link/styles/TransparentLink';
 export { default as List } from './components/List';
 export { default as ListItem } from './components/List/ListItem';
 export { default as OrderedList } from './components/List/OrderedList';
