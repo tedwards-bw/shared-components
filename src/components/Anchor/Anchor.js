@@ -26,6 +26,12 @@ const inferType = children => {
   return 'wrap';
 };
 
+/**
+ *
+ * @deprecated see [Link](/#!/Link)
+ * @class Anchor
+ * @extends {React.Component}
+ */
 class Anchor extends React.Component {
   static propTypes = {
     /**

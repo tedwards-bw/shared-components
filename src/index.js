@@ -191,8 +191,11 @@ export { default as Label } from './components/Label';
 export { default as Link } from './components/Link';
 export { default as IconLink } from './components/Link/styles/IconLink';
 export {
-  default as PropBlacklistLink,
-} from './components/Link/styles/PropBlacklistLink';
+  default as NativeALinkImplementation,
+} from './components/Link/styles/NativeALinkImplementation';
+export {
+  default as RenderLinkImplementation,
+} from './components/Link/styles/RenderLinkImplementation';
 export { default as TextLink } from './components/Link/styles/TextLink';
 export {
   default as TransparentLink,

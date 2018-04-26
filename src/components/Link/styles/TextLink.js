@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import get from 'extensions/themeGet';
 import icons from 'components/Icon/icons';
-import Link from './PropBlacklistLink';
+import Link from './RenderLinkImplementation';
 
 const focusAfterStyles = css`
   height: calc(100% + 0.2em);
