@@ -18,8 +18,22 @@ Link.Icon.Dark = linkExtensions(IconLink.Dark);
 Link.Icon.Inverted = linkExtensions(IconLink.Inverted);
 
 Link.propTypes = {
+  /**
+   * The URL to route to. Maybe external or internal. Different props
+   * will be passed to the underlying element based on external or internal
+   * URLs; all external URLs will open in a new tab and display a special
+   * effect.
+   */
   to: PropTypes.string,
+  /**
+   * Programatically control whether the link appears to be in the focused
+   * state.
+   */
   appearFocused: PropTypes.bool,
+  /**
+   * Content (text) to render within the link.
+   */
+  children: PropTypes.node.isRequired,
 };
 Link.Positive.propTypes = Link.Negative.propTypes = Link.Dark.propTypes = Link.Inverted.propTypes =
   Link.propTypes;
@@ -29,9 +43,23 @@ Link.defaultProps = Link.Positive.defaultProps = Link.Negative.defaultProps = Li
 };
 
 Link.Icon.propTypes = {
+  /**
+   * The URL to route to.
+   */
   to: PropTypes.string,
+  /**
+   * The name of the icon to show
+   */
   icon: PropTypes.string,
+  /**
+   * Programatically control whether the link appears to be in the focused
+   * state.
+   */
   appearFocused: PropTypes.bool,
+  /**
+   * Optional content to render alongside the icon
+   */
+  children: PropTypes.node,
 };
 Link.Icon.Positive.propTypes = Link.Icon.Negative.propTypes = Link.Icon.Dark.propTypes = Link.Icon.Inverted.propTypes =
   Link.Icon.propTypes;
@@ -39,9 +67,19 @@ Link.Icon.defaultProps = Link.Icon.Positive.defaultProps = Link.Icon.Negative.de
   to: '#',
   icon: 'help',
   appearFocused: false,
+  children: null,
 };
 
-Link.Wrap.propTypes = { to: PropTypes.string };
+Link.Wrap.propTypes = {
+  /**
+   * The URL to route to.
+   */
+  to: PropTypes.string,
+  /**
+   * Content of any type to render within the link
+   */
+  children: PropTypes.node.isRequired,
+};
 Link.Wrap.defaultProps = { to: '#' };
 
 /**
