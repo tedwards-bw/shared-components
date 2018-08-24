@@ -4,4 +4,4 @@ node_modules/
 dist/
 *.iml
 packages/**/build/*
-
+.DS_Store
