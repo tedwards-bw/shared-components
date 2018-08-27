@@ -14,8 +14,12 @@ const styles = (theme) => ({
 })
 
 const Button = ({children, variant, color, classes, ...rest}) => {
+  // error is not a default Mui color, so we use a custom CSS class for it.
+  // while presenting it alongside native material options.
   let muiClassName = color === 'error' ? classes.danger : undefined
   let muiColor = color === 'error' ? 'inherit' : color;
+
+
   return (
     <MuiButton className={muiClassName} {...rest} color={muiColor} variant={variant}>
       {children}
