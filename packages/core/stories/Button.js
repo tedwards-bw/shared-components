@@ -9,7 +9,7 @@ export default () => (
     <Button size="small">Primary Small</Button>
     <p>Outline Button - Meant for secondary usage.</p>
     <Button variant="outlined">Secondary Button</Button>
-    <p>Error Color - Meant for dangerous a actions like a delete.</p>
+    <p>Error Color - Meant for dangerous actions like a delete.</p>
     <Button color="error">Danger</Button>
   </div>
 )

@@ -32,7 +32,7 @@ Button.defaultProps = {
   color: 'primary',
   component: 'button',
   size: 'medium',
-  variant: 'raised',
+  variant: 'contained',
 }
 
 Button.propTypes = {
@@ -41,7 +41,7 @@ Button.propTypes = {
    */
   children: PropTypes.node.isRequired,
   /**
-   * The color of the component.
+   * The color of the component. Only used in the 'raised' variant button.
    */
   color: PropTypes.oneOf(['inherit','primary','error']),
   /**
@@ -57,7 +57,7 @@ Button.propTypes = {
   /** The size of the button */
   size: PropTypes.oneOf(['small','medium','large']),
   /** Variations of the Button. */
-  variant: PropTypes.oneOf(['raised','outlined'])
+  variant: PropTypes.oneOf(['contained','outlined'])
 }
 
 
