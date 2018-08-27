@@ -1,28 +1,13 @@
 import React from 'react';
 import MuiButton from '@material-ui/core/Button';
-import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-
-const styles = {
-  root: {
-    borderRadius: '2em',
-    minHeight: 44,
-  },
-  sizeSmall: {
-    minHeight: 36
-  },
-  sizeLarge: {
-    minHeight: 50
-  }
-}
 
 
 const Button = ({children, ...rest}) => (
-  <MuiButton {...rest} variant="raised">
+  <MuiButton {...rest} variant="contained">
     {children}
   </MuiButton>
 )
-Button.displayName = "Button"
 
 Button.defaultProps = {
   disabled: false,
@@ -55,4 +40,4 @@ Button.propTypes = {
 }
 
 
-export default withStyles(styles)(Button);
+export default Button;

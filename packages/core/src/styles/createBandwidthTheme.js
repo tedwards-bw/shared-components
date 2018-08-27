@@ -38,9 +38,29 @@ function createBandwidthTheme(options = {}) {
     },
     overrides: {
       MuiButton: {
-        label: {
-          fontWeight: 700,
-        }
+        root: {
+          borderRadius: '2em',
+          minHeight: 44,
+          fontSize: '.8rem',
+          padding: '14px 28px',
+            fontWeight: 700,
+        },
+        containedPrimary: {
+          '&:hover': {
+            backgroundColor: blue['A700'],
+          }
+        },
+        sizeSmall: {
+          fontWeight: 500,
+          minHeight: 36,
+          fontSize: '.6rem',
+          padding: '10px 28px',
+        },
+        sizeLarge: {
+          minHeight: 50,
+          fontSize: '.9rem',
+          padding: '8px 38px'
+        },
       }
     },
     ...options

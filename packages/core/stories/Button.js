@@ -13,6 +13,6 @@ export default () => (
 
 export const settings = {
   info: {
-    propTables: [ Button.Naked ]
+    propTables: [ Button ]
   }
 }
