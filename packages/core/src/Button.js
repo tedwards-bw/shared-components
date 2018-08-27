@@ -1,19 +1,34 @@
 import React from 'react';
 import MuiButton from '@material-ui/core/Button';
+import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 
+const styles = (theme) => ({
+  danger: {
+    color: theme.palette.error.contrastText,
+    backgroundColor: theme.palette.error.main,
+    '&:hover': {
+      backgroundColor: theme.palette.error.dark
+    }
+  }
+})
 
-const Button = ({children, ...rest}) => (
-  <MuiButton {...rest} variant="contained">
-    {children}
-  </MuiButton>
-)
+const Button = ({children, variant, color, classes, ...rest}) => {
+  let muiClassName = color === 'error' ? classes.danger : undefined
+  let muiColor = color === 'error' ? 'inherit' : color;
+  return (
+    <MuiButton className={muiClassName} {...rest} color={muiColor} variant={variant}>
+      {children}
+    </MuiButton>
+  )
+}
 
 Button.defaultProps = {
   disabled: false,
-  color: 'default',
+  color: 'primary',
   component: 'button',
   size: 'medium',
+  variant: 'raised',
 }
 
 Button.propTypes = {
@@ -24,7 +39,7 @@ Button.propTypes = {
   /**
    * The color of the component.
    */
-  color: PropTypes.oneOf(['default','inherit','primary','secondary']),
+  color: PropTypes.oneOf(['inherit','primary','error']),
   /**
    * The component used for the root node. Either a string to use a DOM element or a component.
    */
@@ -36,8 +51,10 @@ Button.propTypes = {
   /** if `true`, the button will be disabled. */
   disabled: PropTypes.bool,
   /** The size of the button */
-  size: PropTypes.oneOf(['small','medium','large'])
+  size: PropTypes.oneOf(['small','medium','large']),
+  /** Variations of the Button. */
+  variant: PropTypes.oneOf(['raised','outlined'])
 }
 
 
-export default Button;
+export default withStyles(styles)(Button);

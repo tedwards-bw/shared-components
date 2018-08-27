@@ -3,16 +3,19 @@ import Button from '../src/Button';
 
 export default () => (
   <div>
-    <h1>Testing</h1>
-    <p>Oh, the humble button. How many possibilities arise from this single entity.</p>
-    <Button color="primary" size="large">Primary Large</Button>
-    <Button color="primary" size="medium">Primary Medium</Button>
-    <Button color="primary" size="small">Primary Small</Button>
+    <p>Comparison of Button Sizes</p>
+    <Button size="large">Primary Large</Button>
+    <Button size="medium">Primary Medium</Button>
+    <Button size="small">Primary Small</Button>
+    <p>Outline Button - Meant for secondary usage.</p>
+    <Button variant="outlined">Secondary Button</Button>
+    <p>Outline Button - Meant for secondary usage.</p>
+    <Button color="error">Danger</Button>
   </div>
 )
 
 export const settings = {
   info: {
-    propTables: [ Button ]
+    propTables: [ Button.Naked ]
   }
 }

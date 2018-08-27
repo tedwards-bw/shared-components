@@ -17,6 +17,7 @@ function createBandwidthTheme(options = {}) {
         light: orange[100],
         main: orange[500],
         dark: orange[900],
+        contrastText: '#FFF',
       },
       success: {
         light: '#e0fff7',
@@ -44,6 +45,19 @@ function createBandwidthTheme(options = {}) {
           fontSize: '.8rem',
           padding: '14px 28px',
             fontWeight: 700,
+        },
+        outlined: {
+          color: blue['A700'],
+          '&:hover': {
+            color: '#FFF',
+            backgroundColor: blue['A700'],
+          }
+        },
+        outlinedPrimary: {
+          borderColor: blue['A700'],
+          '&:hover': {
+            borderColor: blue['A700'],
+          }
         },
         containedPrimary: {
           '&:hover': {
