@@ -43,7 +43,7 @@ Button.propTypes = {
   /**
    * The color of the component. Only used in the 'raised' variant button.
    */
-  color: PropTypes.oneOf(['inherit','primary','error']),
+  color: PropTypes.oneOf(['primary','error']),
   /**
    * The component used for the root node. Either a string to use a DOM element or a component.
    */
