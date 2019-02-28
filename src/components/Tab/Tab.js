@@ -89,7 +89,7 @@ const Tab = styled.li`
   }}
 
   ${styles.List}:not(${styles.List.Vertical}) > & {
-    flex: 1 0 0;
+    flex: 0 0 auto;
   }
 
   ${styles.List.Vertical} > &, ${styles.Container.Vertical} > ${
