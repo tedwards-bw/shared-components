@@ -14,7 +14,7 @@ const TabList = styled.ul`
   }
 
   ${TabContainer.Vertical} > & {
-    flex: 0 0 25%;
+    flex: 0 0 auto;
   }
 `;
 
